@@ -1,0 +1,26 @@
+
+function sendEmails() {
+  var d = Utilities.formatDate(new Date(), "GMT", "dd/MM/yyyy");
+  
+  var Subject = "CSC on Google Draft Validation-Ending "+d;  
+
+  var recipientsTO = "<@gmail.com>";
+/* var recipientsCC = "@gmail.com";
+  var SS = SpreadsheetApp.getActiveSpreadsheet();
+  var ss = SS.getActiveSheet();
+  url += SS.getUrl();
+  url += '#gid=';
+  url += ss.getSheetId();*/
+ 
+ /* var html =  "This is test email <br/>"+url1+"<br/>"+url2;*/
+  
+   links ="Hi,<br/><br/<a href=https://docs.google.com/spreadsheets/d/<br/>                                                                                                                   <a href=https://docs.google.com/spreadsheets/d/1BXq-07vLsKTeNHHcGwZY_I0pAxvxaYeYvnWdhw-kbPM/edit#gid=0>CSC Issue Log</a><br/>";
+          
+  MailApp.sendEmail({
+    to: recipientsTO,
+   /* cc: recipientsCC,*/
+    subject: Subject,
+    htmlBody: links,
+  });
+
+}
